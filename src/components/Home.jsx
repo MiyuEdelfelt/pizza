@@ -1,12 +1,17 @@
 import React from 'react';
+import Header from './Header';
 import CardPizza from './CardPizza';
 
 const Home = () => {
   return (
-    <div className="container my-4">
-      <h1 className="text-center mb-4">Pizzería Mamma Mia!</h1>
-      <CardPizza />
-    </div>
+    <>
+      <div className="position-relative" style={{ marginTop: '-1px' }}>
+        <Header />
+      </div>
+      <div className="container my-4">
+        <CardPizza />
+      </div>
+    </>
   );
 };
 

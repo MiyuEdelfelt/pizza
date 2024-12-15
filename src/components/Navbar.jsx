@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
       <div className="container-fluid">
         <a className="navbar-brand fw-bold ms-3" href="#">
           Pizzería Mamma Mia!

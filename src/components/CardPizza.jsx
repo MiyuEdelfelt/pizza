@@ -26,27 +26,31 @@ const CardPizza = () => {
     <div className="row">
       {pizzas.map((pizza, index) => (
         <div key={index} className="col-md-4 mb-4">
-          <div className="card shadow-sm" style={{ borderRadius: '10px' }}>
+          <div className="card shadow-sm h-100" style={{ borderRadius: '10px' }}>
             <img
               src={pizza.img}
               className="card-img-top"
               alt={`Imagen de ${pizza.name}`}
               style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
             />
-            <div className="card-body">
-              <h5 className="card-title text-center text-dark">{pizza.name}</h5>
-              <p className="card-text">
+            <div className="card-body d-flex flex-column justify-content-between">
+              <h5 className="card-title text-dark fw-bold mb-3">
+                Pizza {pizza.name}
+              </h5>
+              <hr />  {/*Linea de espacios*/}
+              <p className="card-text text-center mb-3">
                 <strong>Ingredientes:</strong> <br />
                 <span className="text-muted">
                   🍕 {pizza.ingredients.join(', ')}
                 </span>
               </p>
-              <p className="card-text text-center">
-                <strong className="text-dark">Precio:</strong> <span className="text-success fw-bold">${pizza.price.toLocaleString('es-CL')}</span>
+              <hr />
+              <p className="card-text text-center fw-bold fs-5 text-dark">
+                Precio: ${pizza.price.toLocaleString('es-CL')}
               </p>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between mt-3">
                 <button className="btn btn-outline-secondary">
-                  Ver Más <i className="bi bi-eye"></i>
+                  Ver Más <i className="bi bi-eye-fill"></i>
                 </button>
                 <button className="btn btn-dark">
                   Añadir <i className="bi bi-cart-plus"></i>

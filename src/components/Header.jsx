@@ -4,9 +4,9 @@ import headerImage from '../assets/Header.jpg';
 const Header = () => {
   return (
     <header
-      className="bg-dark text-light text-center py-5"
+      className="bg-dark text-light text-center py-5 d-flex align-items-center justify-content-center"
       style={{
-        background: `url(${headerImage})`,
+        backgroundImage: `url(${headerImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '400px',
